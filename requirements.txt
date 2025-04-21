@@ -3,4 +3,5 @@ numpy
 pandas
 scikit-learn
 #torch
-transformers==4.37.2
+transformers==4.31.0
+#transformers==4.37.2
