@@ -1,4 +1,5 @@
-FROM nvcr.io/nvidia/pytorch:23.09-py3
+#FROM nvcr.io/nvidia/pytorch:23.09-py3
+FROM jjamesclt/pytorch23:base
 
 WORKDIR /app
 
