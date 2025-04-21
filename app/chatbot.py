@@ -1,4 +1,5 @@
 from transformers import pipeline
+pipeline("text-generation", model="gpt2")
 
 # Load a model at startup (can replace with local model, RAG logic, etc.)
 chatbot = pipeline("text-generation", model="gpt2")
