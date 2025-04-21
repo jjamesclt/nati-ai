@@ -1,6 +1,6 @@
+flask
 torch
 transformers
 scikit-learn
 numpy
 pandas
-flask
