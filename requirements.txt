@@ -2,5 +2,6 @@ flask
 numpy
 pandas
 scikit-learn
-torch
+#torch
+torch==2.1.0  # or a CPU version
 transformers

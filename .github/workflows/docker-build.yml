@@ -1,7 +1,7 @@
 name: Build and Push Docker Image
 
 on:
-  push:
+  push:FROM python:3.10-slim
     branches:
       - main
   pull_request:
@@ -25,9 +25,19 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Cache Docker layers
+        uses: actions/cache@v4
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           tags: jjamesclt/nati-ai:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
