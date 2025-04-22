@@ -5,7 +5,7 @@ def register_routes(app):
 
     @app.route('/', methods=['GET'])
     def index():
-        return 'nati-ai is running. Use POST /chat or /api.', 200
+        return 'nati-ai Falcon model running. Use POST /chat or /api.', 200
 
     @app.route('/chat', methods=['GET', 'POST'])
     def chat():
