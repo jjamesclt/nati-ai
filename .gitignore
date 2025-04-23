@@ -180,5 +180,9 @@ replit.*
 # Exclude AI Models
 /models
 
+<<<<<<< HEAD
 # NATI configuration
+=======
+# NATI
+>>>>>>> origin/dev
 *.ini
