@@ -10,7 +10,15 @@ model_path = os.path.join('models', model_name)
 print(model_path)
 
 try:
-    chatbot = pipeline("text-generation", model=model_path, device=0 if torch.cuda.is_available() else -1)
+    # Safe CUDA check
+    try:
+        _ = torch.cuda.is_available()
+        device = 0
+    except Exception:
+        device = -1
+
+    print(f"Loading model from {model_path} on device {device}...")
+    chatbot = pipeline("text-generation", model=model_path, device=device)
 except Exception as e:
     print(f"Model load failed: {e}")
     chatbot = None
