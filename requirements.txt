@@ -3,7 +3,6 @@ nati
 numpy
 pandas
 scikit-learn
-#torch
-#transformers==4.31.0
-transformers==4.37.2
-pip install torch --index-url https://download.pytorch.org/whl/cpu
+transformers==4.31.0
+torch==2.1.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu

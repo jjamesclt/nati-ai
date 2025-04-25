@@ -3,5 +3,5 @@ nati
 numpy
 pandas
 scikit-learn
-#torch
+torch
 transformers==4.37.2
