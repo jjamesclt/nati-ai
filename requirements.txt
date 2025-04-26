@@ -1,6 +1,6 @@
 flask
 nati
-numpy
+numpy<2
 pandas
 scikit-learn
 transformers==4.31.0
