@@ -3,6 +3,7 @@ nati
 numpy<2
 pandas
 scikit-learn
+ctransformers
 transformers==4.31.0
 torch==2.1.0+cpu
 --extra-index-url https://download.pytorch.org/whl/cpu
